@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="TextGuie">Put Your Passworr</string>
+    <string name="Emai">Put Your Email Example: EASG@gmail.com</string>
+    <string name="ButonText">Change Color</string>
+</resources>

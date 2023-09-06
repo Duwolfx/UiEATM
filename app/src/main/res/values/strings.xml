@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">UiEATM</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ImagenPrinLogo">In this image the logo is placed</string>
+    <string name="NumberPhone">3025624356</string>
+    <string name="Email">EASG21@gmail.com</string>
+    <string name="Descrip">Content Email</string>
+    <string name="TextGuie">Put Your Passworr</string>
+    <string name="Emai">Put Your Email Example: EASG@gmail.com</string>
+    <string name="phone">Put Your Phone</string>
+    <string name="TextButton">Disguise Phone</string>
+    <string name="ButonText">Change Color</string>
+</resources>
