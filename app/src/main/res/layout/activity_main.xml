@@ -9,7 +9,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FragmentEnBlanco">
+        tools:context=".FragmentEnBlanco"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:id="@+id/button"
@@ -35,7 +37,7 @@
                 android:layout_height="49dp"
                 android:layout_gravity="bottom"
                 android:gravity="bottom|right"
-                android:text="TextView"
+                android:text="@string/ImagenPrinLogo"
                 android:textSize="@dimen/TamPer"
                 tools:text="@string/ImagenPrinLogo" />
 
@@ -48,7 +50,7 @@
                     android:layout_width="183dp"
                     android:layout_height="173dp"
                     android:contentDescription="@string/ImagenPrinLogo"
-                    app:srcCompat="@android:drawable/alert_dark_frame"
+                    app:srcCompat="@mipmap/imagen_round"
                     tools:src="@tools:sample/avatars"
                     tools:srcCompat="@mipmap/ic_launcher" />
             </TableRow>
@@ -86,7 +88,7 @@
                 android:ems="10"
                 android:hint="@string/Emai"
                 android:inputType="textEmailAddress"
-                android:textSize="@dimen/TamañoHori"
+                android:textSize="@dimen/TamPer"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -120,10 +122,10 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/EDPassword"
             android:layout_alignEnd="@+id/EDPassword"
-            android:layout_marginEnd="-47dp"
-            android:layout_marginBottom="45dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="66dp"
             android:text="Hello World!"
-            android:textSize="48sp" />
+            android:textSize="24sp" />
 
     </RelativeLayout>
 

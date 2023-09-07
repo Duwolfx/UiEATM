@@ -81,7 +81,7 @@
             android:ems="10"
             android:hint="@string/Emai"
             android:inputType="textEmailAddress"
-            android:textSize="@dimen/TamañoHori"
+            android:textSize="@dimen/TamPer"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 

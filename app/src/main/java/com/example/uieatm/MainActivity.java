@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         TextoPruba.setText("Mire Mejor Aqui");
         TextoPruba.setAllCaps(true);
         TextoPruba.setTextColor(Color.BLUE);
-
         PassWord.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
