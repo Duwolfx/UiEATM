@@ -1,25 +1,26 @@
-package com.example.uieatm;
+    package com.example.uieatm;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Button;
 
+    /**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link MainFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class MainFragment extends Fragment {
 
-public class FragmentEnBlanco extends Fragment {
-
-    TextView TextoPruba;
-    EditText PassWord;
+    Button opcionUnoBtn;
+    Button opcionDosBtn;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +31,7 @@ public class FragmentEnBlanco extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FragmentEnBlanco() {
+    public MainFragment() {
         // Required empty public constructor
     }
 
@@ -40,21 +41,16 @@ public class FragmentEnBlanco extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentEnBlanco.
+     * @return A new instance of fragment MainFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentEnBlanco newInstance(String param1, String param2) {
-        FragmentEnBlanco fragment = new FragmentEnBlanco();
+    public static MainFragment newInstance(String param1, String param2) {
+        MainFragment fragment = new MainFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public void ChangeColor(View v) {
-
-
     }
 
     @Override
@@ -66,39 +62,36 @@ public class FragmentEnBlanco extends Fragment {
         }
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_en_blanco, container, false);
+        return inflater.inflate(R.layout.fragment_main, container, false);
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        TextoPruba= (TextView) getView().findViewById(R.id.textoejemplo );
-        PassWord= (EditText) getView().findViewById(R.id.EDPassword );
+        opcionUnoBtn = (Button) view.findViewById(R.id.button3);
+        opcionDosBtn = (Button) view.findViewById(R.id.button4);
 
-        TextoPruba.setText("Mire Mejor Aqui");
-        TextoPruba.setAllCaps(true);
-        TextoPruba.setTextColor(Color.BLUE);
-        PassWord.addTextChangedListener(new TextWatcher() {
+        opcionUnoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                String PasswordInicial= PassWord.getText().toString();
-                TextoPruba.setText(PasswordInicial);
+            public void onClick(View view) {
+                    Navigation.findNavController(view).navigate(R.id.fragmentEnBlanco);
             }
         });
+
+        opcionDosBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.dosFragment);
+            }
+        });
+    }
+
+        public void opcionUno(View v){
+
+    }
+    public void opcionDos(View v){
+
     }
 }

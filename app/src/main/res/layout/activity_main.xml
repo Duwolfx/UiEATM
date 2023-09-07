@@ -1,133 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
-    <RelativeLayout
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FragmentEnBlanco"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="87dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="102dp"
-            android:layout_marginBottom="634dp"
-            android:drawableLeft="@android:drawable/dialog_frame"
-            android:text="@string/ButonText" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="7dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="49dp"
-                android:layout_gravity="bottom"
-                android:gravity="bottom|right"
-                android:text="@string/ImagenPrinLogo"
-                android:textSize="@dimen/TamPer"
-                tools:text="@string/ImagenPrinLogo" />
-
-            <TableRow
-                android:layout_width="220dp"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="183dp"
-                    android:layout_height="173dp"
-                    android:contentDescription="@string/ImagenPrinLogo"
-                    app:srcCompat="@mipmap/imagen_round"
-                    tools:src="@tools:sample/avatars"
-                    tools:srcCompat="@mipmap/ic_launcher" />
-            </TableRow>
-
-        </LinearLayout>
-
-
-        <FrameLayout
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="232dp">
-
-            <EditText
-                android:id="@+id/editTextPhone"
-                android:layout_width="147dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/phone"
-                android:inputType="phone"
-                tools:ignore="TouchTargetSizeCheck" />
-
-        </FrameLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="282dp"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editTextTextEmailAddress2"
-                android:layout_width="657dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/Emai"
-                android:inputType="textEmailAddress"
-                android:textSize="@dimen/TamPer"
-                tools:ignore="TouchTargetSizeCheck" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/TextCh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="75dp"
-            android:layout_marginBottom="342dp"
-            android:text="TextView"
-            android:textSize="60sp" />
-
-        <EditText
-            android:id="@+id/EDPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/TextCh"
-            android:layout_marginStart="-214dp"
-            android:layout_marginBottom="102dp"
-            android:layout_toEndOf="@+id/TextCh"
-            android:ems="10"
-            android:hint="@string/TextGuie"
-            android:minHeight="48dp"
-            tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/textoejemplo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/EDPassword"
-            android:layout_alignEnd="@+id/EDPassword"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="66dp"
-            android:text="Hello World!"
-            android:textSize="24sp" />
-
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/grap" />
+</LinearLayout>
